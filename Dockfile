@@ -1,0 +1,11 @@
+FROM debian:stable
+
+RUN groupadd -g 1000 vlc && \
+    useradd -m -d /data -s /bin/sh -u 1000 -g 1000 vlc
+
+RUN apt-get update && \
+    apt-get install -y vlc && \
+    apt-get install -y cloudflare && \
+    apt-get clean
+
+USER vlc

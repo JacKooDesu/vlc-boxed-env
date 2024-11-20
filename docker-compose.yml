@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  vlc:
+    container_name: vlc-boxed-env
+    build:
+      context: .
+      dockerfile: Dockfile
+    stdin_open: true
+    tty: true
+    volumes:
+      - ${DIR}:/data
+    working_dir: /data
+    ports:
+      - 8080:8080
