@@ -13,4 +13,7 @@ down:
 	${DOCKER_CMD} down
 
 connect:
-	${CONTAINER_CMD} sh
+	${CONTAINER_CMD} bash
+
+http-stream:
+	${CONTAINER_CMD} http-stream.sh
