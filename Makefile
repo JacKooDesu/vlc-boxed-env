@@ -16,4 +16,4 @@ connect:
 	${CONTAINER_CMD} bash
 
 http-stream:
-	${CONTAINER_CMD} http-stream.sh
+	docker exec -t vlc-boxed-env bash http-stream.sh
